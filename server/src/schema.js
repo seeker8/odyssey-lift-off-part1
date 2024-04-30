@@ -12,6 +12,13 @@ const typeDefs = gql`
     length: Int
     modulesCount: Int
   }
+  
+  "Author of a complete Track or a Module"
+  type Author {
+    id: ID!
+    name: String!
+    photo: String
+  }
 `;
 
 export default typeDefs;
