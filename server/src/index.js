@@ -4,4 +4,5 @@ import typeDefs from "./schema";
 
 async function startApolloServer() {
     const server = new ApolloServer({ typeDefs });
+    const { url } = await startStandaloneServer(server);
 }
