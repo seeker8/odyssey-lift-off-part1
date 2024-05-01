@@ -9,7 +9,7 @@ export const typeDefs = gql`
     "the track's title"
     title: String!
     "The track's main author"
-    autor: Author!
+    author: Author!
     "The track's main illustration to display in track card or track page detail"
     thumbnail: String
     "The track's approximate length to complete, in minutes"
