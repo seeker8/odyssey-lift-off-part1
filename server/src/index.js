@@ -1,6 +1,6 @@
-const { ApolloServer } = require('@apollo/server');
-const { startStandaloneServer } = require('@apollo/server/standalone');
-const typeDefs = require("./schema");
+import { ApolloServer } from '@apollo/server';
+import { startStandaloneServer } from '@apollo/server/standalone';
+import { typeDefs } from "./schema.js";
 
 async function startApolloServer() {
     const server = new ApolloServer({ typeDefs });
