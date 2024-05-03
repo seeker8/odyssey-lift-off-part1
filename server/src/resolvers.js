@@ -10,5 +10,5 @@ export const resolvers = {
         author: ({ authorId }, _, { dataSources })=> {
             return dataSources.trackAPI.getAuthor(authorId);
         }
-    }``
+    }
 };
