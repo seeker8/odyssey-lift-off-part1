@@ -45,5 +45,7 @@ export const typeDefs = gql`
   type Query {
     "Get tracks array for homepage grid"
     tracksForHome: [Track!]!
+    "Fetch a specific track, provided a track's ID"
+    track(id: ID!): Track
   }
 `;
