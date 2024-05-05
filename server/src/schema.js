@@ -40,6 +40,10 @@ export const typeDefs = gql`
     title: String!
     "The Module's length in minutes"
     length: Int
+    "The Module's content description"
+    content: String
+    "The Module's video url"
+    videoUrl: String
   }
 
   type Query {
@@ -47,5 +51,7 @@ export const typeDefs = gql`
     tracksForHome: [Track!]!
     "Fetch a specific track, provided a track's ID"
     track(id: ID!): Track
+    "Fetch a specific module, provided a module's ID"
+    module(id: ID!): Module
   }
 `;
