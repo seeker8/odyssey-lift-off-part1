@@ -46,6 +46,17 @@ export const typeDefs = gql`
     videoUrl: String
   }
 
+  type IncrementTrackViewsResponse {
+    "Similar to HTTP status code, represents the status of the mutation"
+    code: Int!
+    "Indicates whether the mutation was successful"
+    success: Boolean!
+    "Human-readable message for the UI"
+    message: Strgin!
+    "Newly updated track after a successful mutation"
+    track: Track
+  }
+
   type Query {
     "Get tracks array for homepage grid"
     tracksForHome: [Track!]!
@@ -53,5 +64,9 @@ export const typeDefs = gql`
     track(id: ID!): Track
     "Fetch a specific module, provided a module's ID"
     module(id: ID!): Module
+  }
+
+  type Mutation {
+    incrementTrackViews(id: ID!): IncrementTrackViewsResponse!
   }
 `;
