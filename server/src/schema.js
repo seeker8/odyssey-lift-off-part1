@@ -52,7 +52,7 @@ export const typeDefs = gql`
     "Indicates whether the mutation was successful"
     success: Boolean!
     "Human-readable message for the UI"
-    message: Strgin!
+    message: String!
     "Newly updated track after a successful mutation"
     track: Track
   }
