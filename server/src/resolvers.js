@@ -15,7 +15,7 @@ export const resolvers = {
         }
     },
     Mutation: {
-      incrementTrackViews:async (_, { id }, { dataSources }) => {
+      incrementTrackViews: async (_, { id }, { dataSources }) => {
         try {
           const track = await dataSources.trackAPI.incrementTrackViews(id);
           return {
@@ -23,8 +23,8 @@ export const resolvers = {
             success: true,
             message: `Successfully incremented number of views for track ${id}`,
             track
-          }
-        }catch(err){
+          };
+        } catch (err) {
           return {
             code: err.extensions.response.status,
             success: false,
